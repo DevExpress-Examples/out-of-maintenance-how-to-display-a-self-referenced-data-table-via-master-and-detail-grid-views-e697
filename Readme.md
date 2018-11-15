@@ -1,3 +1,8 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [FormMain.cs](./CS/FormMain.cs) (VB: [FormMain.vb](./VB/FormMain.vb))
+<!-- default file list end -->
 # How to display a self-referenced data table via master and detail grid views
 
 
