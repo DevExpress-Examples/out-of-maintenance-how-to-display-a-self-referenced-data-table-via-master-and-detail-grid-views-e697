@@ -23,22 +23,14 @@ namespace SelfReferenced {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.dataset11 = new SelfReferenced.Dataset1();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colDepartment = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colBudget = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colLocation = new DevExpress.XtraGrid.Columns.GridColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataset11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataset11
-            // 
-            this.dataset11.DataSetName = "Dataset1";
-            this.dataset11.Locale = new System.Globalization.CultureInfo("en-US");
-            this.dataset11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gridControl1
             // 
@@ -98,7 +90,6 @@ namespace SelfReferenced {
             this.Name = "FormMain";
             this.Text = "FormMain";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataset11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
@@ -106,8 +97,7 @@ namespace SelfReferenced {
         }
 
         #endregion
-
-        private Dataset1 dataset11;
+        
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn colDepartment;
