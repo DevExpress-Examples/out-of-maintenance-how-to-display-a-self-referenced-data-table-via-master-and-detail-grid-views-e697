@@ -1,22 +1,24 @@
-﻿Namespace SelfReferenced
-    Partial Public Class FormMain
-        ''' <summary>
-        ''' Required designer variable.
-        ''' </summary>
-        Private components As System.ComponentModel.IContainer = Nothing
+Imports Microsoft.VisualBasic
+Imports System
+Namespace SelfReferenced
+	Partial Public Class FormMain
+		''' <summary>
+		''' Required designer variable.
+		''' </summary>
+		Private components As System.ComponentModel.IContainer = Nothing
 
-        ''' <summary>
-        ''' Clean up any resources being used.
-        ''' </summary>
-        ''' <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        Protected Overrides Sub Dispose(ByVal disposing As Boolean)
-            If disposing AndAlso (components IsNot Nothing) Then
-                components.Dispose()
-            End If
-            MyBase.Dispose(disposing)
-        End Sub
+		''' <summary>
+		''' Clean up any resources being used.
+		''' </summary>
+		''' <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+		Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+			If disposing AndAlso (components IsNot Nothing) Then
+				components.Dispose()
+			End If
+			MyBase.Dispose(disposing)
+		End Sub
 
-        #Region "Windows Form Designer generated code"
+#Region "Windows Form Designer generated code"
 
         ''' <summary>
         ''' Required method for Designer support - do not modify
@@ -40,15 +42,16 @@
             Me.gridControl1.Name = "gridControl1"
             Me.gridControl1.Size = New System.Drawing.Size(597, 366)
             Me.gridControl1.TabIndex = 1
-            Me.gridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() { Me.gridView1})
+            Me.gridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gridView1})
             ' 
             ' gridView1
             ' 
-            Me.gridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() { Me.colDepartment, Me.colBudget, Me.colLocation})
+            Me.gridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colDepartment, Me.colBudget, Me.colLocation})
             Me.gridView1.DetailHeight = 1000
             Me.gridView1.GridControl = Me.gridControl1
             Me.gridView1.Name = "gridView1"
             Me.gridView1.OptionsView.ShowGroupPanel = False
+            AddHandler Me.gridView1.MasterRowGetLevelDefaultView, AddressOf Me.gridView1_MasterRowGetLevelDefaultView
             ' 
             ' colDepartment
             ' 
@@ -78,24 +81,25 @@
             ' 
             ' FormMain
             ' 
-            Me.AutoScaleDimensions = New System.Drawing.SizeF(6F, 13F)
+            Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0F, 13.0F)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.ClientSize = New System.Drawing.Size(597, 366)
             Me.Controls.Add(Me.gridControl1)
             Me.Name = "FormMain"
             Me.Text = "FormMain"
+            AddHandler Me.Load, AddressOf Me.Form1_Load
             CType(Me.gridControl1, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.gridView1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
 
         End Sub
 
-        #End Region
+#End Region
 
         Private gridControl1 As DevExpress.XtraGrid.GridControl
-        Private WithEvents gridView1 As DevExpress.XtraGrid.Views.Grid.GridView
-        Private colDepartment As DevExpress.XtraGrid.Columns.GridColumn
-        Private colBudget As DevExpress.XtraGrid.Columns.GridColumn
-        Private colLocation As DevExpress.XtraGrid.Columns.GridColumn
-    End Class
+		Private WithEvents gridView1 As DevExpress.XtraGrid.Views.Grid.GridView
+		Private colDepartment As DevExpress.XtraGrid.Columns.GridColumn
+		Private colBudget As DevExpress.XtraGrid.Columns.GridColumn
+		Private colLocation As DevExpress.XtraGrid.Columns.GridColumn
+	End Class
 End Namespace
